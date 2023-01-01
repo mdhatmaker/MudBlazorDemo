@@ -1,0 +1,61 @@
+﻿@page "/about"
+
+<PageTitle>About</PageTitle>
+
+<h1 class="mt-2">About</h1>
+
+<div class="row mb-3">
+    <MudAlert Severity="Severity.Normal">The reactor type is RBMK-1000</MudAlert>
+    <MudAlert Severity="Severity.Info">The reactor was fired up successfully</MudAlert>
+    <MudAlert Severity="Severity.Success">The reactor is running at optimum temperature</MudAlert>
+    <MudAlert Severity="Severity.Warning">The reactor temperature exceeds the optimal range</MudAlert>
+    <MudAlert Severity="Severity.Error">Meltdown is imminent</MudAlert>
+</div>
+
+<div class="row mb-3">
+    <MudAvatar Color="Color.Primary">M</MudAvatar>
+    <MudAvatar Color="Color.Secondary">U</MudAvatar>
+    <MudAvatar Color="Color.Tertiary">D</MudAvatar>
+</div>
+
+<div class="row mb-3">
+    <MudAvatar Color="Color.Warning" Variant="Variant.Filled">
+        <MudIcon Color="Color.Dark" Icon="@Icons.Custom.Uncategorized.Radioactive" Size="Size.Large" />
+    </MudAvatar>
+    <MudAvatar Color="Color.Primary" Variant="Variant.Outlined">
+        <MudIcon Icon="@Icons.Custom.Brands.MudBlazor" />
+    </MudAvatar>
+    <MudAvatar Color="Color.Secondary" Variant="Variant.Outlined">
+        <MudIcon Icon="@Icons.Material.Filled.FormatListNumbered" />
+    </MudAvatar>
+</div>
+
+<div class="row mb-3">
+    <MudAvatar Size="Size.Small" Color="Color.Primary">A</MudAvatar>
+    <MudAvatar Size="Size.Medium" Color="Color.Primary">A</MudAvatar>
+    <MudAvatar Size="Size.Large" Color="Color.Primary">A</MudAvatar>
+    <MudAvatar Style="height:70px; width:70px; font-size:2rem;" Color="Color.Primary">A</MudAvatar>
+    <MudAvatar Style="height:70px; width:70px; font-size:2rem;" Color="Color.Primary" Variant="Variant.Outlined">A</MudAvatar>
+    <MudAvatar Size="Size.Large" Color="Color.Primary" Variant="Variant.Outlined">A</MudAvatar>
+    <MudAvatar Size="Size.Medium" Color="Color.Primary" Variant="Variant.Outlined">A</MudAvatar>
+    <MudAvatar Size="Size.Small" Color="Color.Primary" Variant="Variant.Outlined">A</MudAvatar>
+</div>
+
+<div class="row mb-3">
+    <link href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" rel="stylesheet">
+
+    <MudIcon Icon="fab fa-internet-explorer" Color="Color.Primary" />
+    <MudIcon Icon="fab fa-angellist" Color="Color.Secondary" />
+    <MudIcon Icon="fas fa-dragon" Color="Color.Success" />
+    <MudIcon Icon="fas fa-toilet-paper-slash" />
+    <MudIcon Icon="fas fa-toilet-paper-slash" Size="Size.Small" />
+    <MudIcon Icon="fas fa-toilet-paper-slash" Size="Size.Large" />
+</div>
+
+
+
+@code {
+
+
+}
+

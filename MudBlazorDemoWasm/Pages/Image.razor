@@ -1,0 +1,69 @@
+﻿@page "/image"
+
+<h1 class="mt-3">Image</h1>
+
+<MudImage Src="images/mony.jpg" Alt="Mony the dog" Elevation="25" Class="rounded-lg" />
+
+<MudImage Src="images/sweden.jpg" Width="200" Height="150" Alt="Swedish Farm House" Elevation="25" Class="rounded-lg ma-4" />
+<MudImage Src="images/sweden.jpg" Width="332" Height="250" Alt="Swedish Farm House" Elevation="25" Class="rounded-lg ma-4" />
+
+<div class="docs-section-content-inner d-block mx-auto mud-width-full px-8 pb-8 pt-2">
+    <!--!-->
+    <div class="relative mud-width-full" style="height:300px;">
+        <div style="max-width: 100%; width: 503px; height: 100%; user-select: none;" class="pointer-events-none z-10 d-flex align-center"><!--!--><!--!--><img src="images/iceland.jpg" alt="Swedish Farm House" class="mud-image fluid object-fill object-center rounded-lg"></div>
+        <!--!-->
+        <div class="absolute pointer-events-none d-flex align-center" style="top:0; bottom: 0; left: 14px; width: 100%;">
+            <!--!-->
+            <div class="mud-paper mud-elevation-25 absolute ma-4 cursor-col-resize z-20 pointer-events-auto" style="height:100px;width:8px;left:0; transform: translate3d(503px, 0px, 0px) scale(1, 1);;"></div>
+        </div>
+    </div>
+</div>
+
+<MudImage Fluid="true" Src="images/iceland.jpg" Alt="Iceland Nature Scene" Class="rounded-lg" />
+
+<div class="d-flex justify-center">
+    <MudImage ObjectFit="@ImageFit" Height="200" Width="400" Src="images/castle.jpg" Alt="Örebro Slott" Elevation="25" Class="rounded-lg" />
+</div>
+
+<MudChipSet Filter="true" Mandatory="true" Class="mt-12">
+    <MudChip Text="None" OnClick="@(() => SetImageFit(ObjectFit.None))" SelectedColor="Color.Primary" />
+    <MudChip Text="Cover" OnClick="@(() => SetImageFit(ObjectFit.Cover))" SelectedColor="Color.Primary" Default="true" />
+    <MudChip Text="Contain" OnClick="@(() => SetImageFit(ObjectFit.Contain))" SelectedColor="Color.Primary" />
+    <MudChip Text="Fill" OnClick="@(() => SetImageFit(ObjectFit.Fill))" SelectedColor="Color.Primary" />
+    <MudChip Text="ScaleDown" OnClick="@(() => SetImageFit(ObjectFit.ScaleDown))" SelectedColor="Color.Primary" />
+</MudChipSet>
+
+
+<div class="d-flex justify-center">
+    <MudImage ObjectFit="ObjectFit.None" ObjectPosition="@ImagePosition" Height="200" Width="400" Src="images/iceland.jpg" Alt="Öxarárfoss, Iceland" Elevation="25" Class="rounded-lg" />
+</div>
+
+<MudChipSet Filter="true" Mandatory="true" Class="mt-12">
+    <MudChip Text="Center" OnClick="@(() => SetImagePosition(ObjectPosition.Center))" SelectedColor="Color.Primary" Default="true" />
+    <MudChip Text="Top" OnClick="@(() => SetImagePosition(ObjectPosition.Top))" SelectedColor="Color.Primary" />
+    <MudChip Text="Bottom" OnClick="@(() => SetImagePosition(ObjectPosition.Bottom))" SelectedColor="Color.Primary" />
+    <MudChip Text="Left" OnClick="@(() => SetImagePosition(ObjectPosition.Left))" SelectedColor="Color.Primary" />
+    <MudChip Text="Left Top" OnClick="@(() => SetImagePosition(ObjectPosition.LeftTop))" SelectedColor="Color.Primary" />
+    <MudChip Text="Left Bottom" OnClick="@(() => SetImagePosition(ObjectPosition.LeftBottom))" SelectedColor="Color.Primary" />
+    <MudChip Text="Right" OnClick="@(() => SetImagePosition(ObjectPosition.Right))" SelectedColor="Color.Primary" />
+    <MudChip Text="Right Top" OnClick="@(() => SetImagePosition(ObjectPosition.RightTop))" SelectedColor="Color.Primary" />
+    <MudChip Text="Right Bottom" OnClick="@(() => SetImagePosition(ObjectPosition.RightBottom))" SelectedColor="Color.Primary" />
+</MudChipSet>
+
+
+
+@code {
+    ObjectFit ImageFit = ObjectFit.Cover;
+    ObjectPosition ImagePosition = ObjectPosition.Center;
+
+    void SetImageFit(ObjectFit value)
+    {
+        ImageFit = value;
+    }
+
+    void SetImagePosition(ObjectPosition value)
+    {
+        ImagePosition = value;
+    }
+
+}
